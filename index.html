@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AlgoVisualizer</title>
-
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AlgoVisualizer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <h1>Sorting Visualizer with Step Mode</h1>
 
 <div class="controls">
   <button id="newArrayBtn">New Array</button>
-  <button id="bubbleBtn">Bubble Sort</button>
-  <button id="selectionBtn">Selection Sort</button>
-  <button id="insertionBtn">Insertion Sort</button>
-  <button id="startBtn">Start Sort</button>
+  <select id="algoSelect">
+    <option value="">Choose Sorting Algo</option>
+    <option value="bubble">Bubble Sort</option>
+    <option value="selection">Selection Sort</option>
+    <option value="insertion">Insertion Sort</option>
+  </select>
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
   <button id="stepToggleBtn">Enable Step Mode</button>
   <button id="nextStepBtn" disabled>Next Step</button>
-  <br/>
+  <br />
   <label>Speed:
     <input type="range" id="speedSlider" min="50" max="1000" value="300" />
   </label>
@@ -28,8 +30,9 @@
   </label>
 </div>
 
-<div id="array-container"></div>
+<div id="array-container" class="number-only"></div>
 
+<!-- moved down -->
 <div id="explanation">Explanation will appear here</div>
 
 <script src="script.js"></script>

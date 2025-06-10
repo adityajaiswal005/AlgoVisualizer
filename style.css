@@ -1,38 +1,86 @@
+body {
+   font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    text-align: center;
-  }
-  #array-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 200px;
-    margin: 20px 0;
-  }
-  .bar {
-    margin: 0 2px;
-    background-color: #3498db;
-    width: 20px;
-    transition: background-color 0.3s;
-  }
-  .bar.active {
-    background-color: #e74c3c;
-  }
-  .bar.swapped {
-    background-color: #2ecc71;
-  }
-  button, input[type=range] {
-    margin: 5px;
-    padding: 8px 12px;
-    font-size: 16px;
-  }
-  #explanation {
-    margin-top: 20px;
-    min-height: 40px;
-    font-weight: bold;
-  }
-  .controls {
-    margin-bottom: 10px;
-  }
+h1 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+button,
+input[type="range"],
+select {
+  margin: 5px;
+  padding: 8px 14px;
+  font-size: 16px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.controls button,
+.controls select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2980b9;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  min-width: 160px;
+  text-align: center;
+}
+
+.controls button:hover,
+.controls select:hover {
+  background-color: #1f6391;
+  transform: scale(1.03);
+}
+
+.controls select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+#array-container {
+ display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+  margin: 30px 0;
+
+}
+
+.number-box {
+  padding: 10px 14px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.bar {
+  display: none;
+}
+
+
+
+#explanation {
+  margin-top: 60px; /* moved it lower */
+  min-height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+}
